@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<!--
+    This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<!--
+    Checkstyle-Configuration: mycs
+    Description: none
+-->
+<module name="Checker">
+  <property name="severity" value="warning"/>
+  <module name="TreeWalker">
+    <property name="tabWidth" value="4"/>
+    <module name="PackageDeclaration">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Paquetage obligatoire"/>
+      <property name="severity" value="error"/>
+    </module>
+    <module name="AvoidStarImport">
+      <property name="severity" value="info"/>
+    </module>
+    <module name="DeclarationOrder">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="Indentation">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="warning"/>
+    </module>
+    <module name="NeedBraces">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Utilisation des accolades toujours obligatoire"/>
+      <property name="severity" value="error"/>
+      <message key="needBraces" value="FMT-BRACE: L''instruction ''{0}'' doit utiliser des accolades  ('''{''' et '''}''')."/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Instruction blocks must always use braces."/>
+    </module>
+    <module name="LineLength">
+      <property name="severity" value="warning"/>
+      <property name="ignorePattern" value="@see"/>
+      <property name="max" value="160"/>
+      <property name="tabWidth" value="4"/>
+      <message key="maxLineLen" value="FMT-LLEN: La ligne excède {0,number,integer} caractères."/>
+    </module>
+    <module name="ArrayTypeStyle">
+      <property name="severity" value="warning"/>
+    </module>
+    <module name="WhitespaceAfter">
+      <property name="severity" value="error"/>
+      <property name="tokens" value="COMMA,SEMI"/>
+    </module>
+    <module name="WhitespaceAround">
+      <property name="severity" value="error"/>
+      <property name="tokens" value="ASSIGN,BAND,BAND_ASSIGN,BOR,BOR_ASSIGN,BSR,BSR_ASSIGN,BXOR,BXOR_ASSIGN,DIV,DIV_ASSIGN,EQUAL,GE,LAND,LE,LOR,MINUS,MINUS_ASSIGN,MOD,MOD_ASSIGN,NOT_EQUAL,PLUS,PLUS_ASSIGN,SL,SL_ASSIGN,SR,SR_ASSIGN,STAR,STAR_ASSIGN"/>
+      <message key="ws.notPreceded" value="FMT-SPACE: Il manque un espace avant ''{0}''."/>
+      <message key="ws.notFollowed" value="FMT-SPACE: Il manque un espace après ''{0}''."/>
+    </module>
+    <module name="MethodParamPad">
+      <property name="severity" value="error"/>
+      <property name="tokens" value="METHOD_CALL,METHOD_DEF"/>
+      <message key="ws.notPreceded" value="Il manque un espace avant ''{0}''."/>
+      <message key="ws.preceded" value="FMT-SPACE: Il y a un espace de trop avant ''{0}''."/>
+    </module>
+    <module name="ParenPad">
+      <property name="severity" value="error"/>
+      <message key="ws.notPreceded" value="FMT-SPACE: Il manque un espace avant ''{0}''."/>
+      <message key="ws.notFollowed" value="FMT-SPACE: Il manque un espace après ''{0}''."/>
+      <message key="ws.followed" value="FMT-SPACE: Il y a un espace de trop après  ''{0}''."/>
+      <message key="ws.preceded" value="FMT-SPACE: Il y a un espace de trop avant ''{0}''."/>
+    </module>
+    <module name="NoWhitespaceBefore">
+      <property name="severity" value="error"/>
+      <message key="ws.preceded" value="FMT-SPACE: Il y a un espace de trop avant ''{0}''."/>
+    </module>
+    <module name="NoWhitespaceAfter">
+      <property name="severity" value="error"/>
+      <property name="allowLineBreaks" value="false"/>
+      <property name="tokens" value="DOT,UNARY_MINUS,UNARY_PLUS"/>
+      <message key="ws.followed" value="FMT-SPACE: Il y a un espace de trop après  ''{0}''."/>
+    </module>
+    <module name="JavadocType">
+      <property name="severity" value="warning"/>
+      <property name="scope" value="protected"/>
+      <property name="authorFormat" value="\S"/>
+      <property name="allowUnknownTags" value="true"/>
+    </module>
+    <module name="JavadocMethod">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Javadoc sur méthodes 'public' et 'protected'  (sauf getters et setters)"/>
+      <property name="severity" value="warning"/>
+      <property name="allowUndeclaredRTE" value="true"/>
+      <property name="allowMissingPropertyJavadoc" value="true"/>
+      <message key="javadoc.unusedTag" value="DOC-METHOD: Balise javadoc {0} inutilisé pour ''{1}''."/>
+      <message key="javadoc.duplicateTag" value="DOC-METHOD: Balise javadoc {0} présente plus d''une fois."/>
+      <message key="javadoc.unusedTagGeneral" value="DOC-METHOD: Balise javadoc inutilisé."/>
+      <message key="javadoc.classInfo" value="DOC-METHOD: Impossible d''obtenir les informations relatives à la classe {1} pour la balise ''{0}''."/>
+      <message key="javadoc.expectedTag" value="DOC-METHOD: Balise javadoc {0} manquante pour ''{1}''."/>
+      <message key="javadoc.return.expected" value="DOC-METHOD: Balise javadoc @return manquante."/>
+      <message key="javadoc.missing" value="DOC-METHOD: Commentaire javadoc manquant."/>
+      <message key="javadoc.invalidInheritDoc" value="DOC-METHOD: Invalid use of the '{'@inheritDoc'}' tag."/>
+    </module>
+    <module name="JavadocVariable">
+      <property name="severity" value="warning"/>
+      <property name="scope" value="package"/>
+    </module>
+    <module name="JavadocStyle">
+      <property name="severity" value="warning"/>
+      <property name="checkEmptyJavadoc" value="true"/>
+      <property name="checkFirstSentence" value="false"/>
+      <property name="checkHtml" value="false"/>
+    </module>
+    <module name="TypeName">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Format des noms de types"/>
+      <property name="severity" value="error"/>
+      <message key="name.invalidPattern" value="NAM-TYPE: Le nom ''{0}'' n''est pas conforme à l''expression ''{1}''."/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Type names must start with an uppercase letter"/>
+    </module>
+    <module name="MemberName">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="StaticVariableName">
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Static variable names must begin with 'static'."/>
+    </module>
+    <module name="ConstantName">
+      <property name="severity" value="error"/>
+      <property name="format" value="^[A-Z0-9]*(_[A-Z0-9]+)*$"/>
+      <message key="name.invalidPattern" value="NAM-CONST: Le nom ''{0}'' n''est pas conforme à l''expression ''{1}''."/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Constant names must be written in uppercase letters"/>
+    </module>
+    <module name="MethodName">
+      <property name="severity" value="error"/>
+      <message key="name.invalidPattern" value="NAM-METHOD: Le nom ''{0}'' n''est pas conforme à l''expression ''{1}''."/>
+    </module>
+    <module name="ModifierOrder">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="VisibilityModifier">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Variables membres privées"/>
+      <property name="severity" value="warning"/>
+      <property name="protectedAllowed" value="true"/>
+    </module>
+    <module name="SuperFinalize">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="MultipleVariableDeclarations">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Interdit de déclarer plus d''une variable par ligne."/>
+      <property name="severity" value="error"/>
+    </module>
+    <module name="MissingSwitchDefault">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="DefaultComesLast">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Le cas &quot;default&quot; doit apparaitre en dernier"/>
+      <property name="severity" value="error"/>
+    </module>
+    <module name="IllegalToken">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Labels interdits"/>
+      <property name="severity" value="error"/>
+      <property name="tokens" value="LABELED_STAT"/>
+      <message key="illegal.token" value="Il est interdit d''utiliser les lables dans le code."/>
+    </module>
+    <module name="AvoidInlineConditionals">
+      <metadata name="net.sf.eclipsecs.core.comment" value="L'opérateur conditionel est déconseillée"/>
+      <property name="severity" value="ignore"/>
+      <message key="inline.conditional.avoid" value="L''utilisation de l''opérateur conditionel est déconseillée."/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="warning"/>
+    </module>
+    <module name="InnerAssignment">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="GenericIllegalRegexp">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="GenericIllegalRegexp">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="GenericIllegalRegexp">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="MethodLength">
+      <property name="severity" value="error"/>
+      <property name="max" value="70"/>
+    </module>
+    <module name="ParameterNumber">
+      <property name="severity" value="warning"/>
+      <property name="max" value="4"/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="7 parameters per method max."/>
+    </module>
+    <module name="MagicNumber">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Utiliser des constantes au lieu de valeurs codées 'en dur'"/>
+      <property name="severity" value="warning"/>
+      <property name="ignoreNumbers" value="-1, 0, 1, 2, 3, 4, 5"/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Avoid 'magic' numbers."/>
+    </module>
+    <module name="SuperClone">
+      <property name="severity" value="warning"/>
+    </module>
+    <module name="SimplifyBooleanExpression">
+      <property name="severity" value="warning"/>
+      <message key="simplify.expression" value="BP-BOOL: L''expression peut être simplifiée."/>
+    </module>
+    <module name="FinalClass"/>
+    <module name="EqualsHashCode">
+      <property name="severity" value="error"/>
+      <message key="equals.noHashCode" value="COD-EQUALS: La définition de la méthode ''equals()'' doit toujours être accompagnée de la définition de la méthode ''hashCode()''."/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="equals() &amp; hashCode() MUST be both defined  (if one is defined, the other must be as well)"/>
+    </module>
+    <module name="StringLiteralEquality">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Toujours utiliser equals() pour comparer des chaines de caractères"/>
+      <property name="severity" value="error"/>
+      <message key="string.literal.equality" value="COD-EQUALS: Les chaines de caractères doivent être comparées avec la méthode equals() et pas avec ''{0}''."/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="No '==' on strings"/>
+    </module>
+    <module name="SimplifyBooleanReturn">
+      <property name="severity" value="warning"/>
+    </module>
+    <module name="FallThrough">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="CovariantEquals">
+      <property name="severity" value="error"/>
+    </module>
+    <module name="HiddenField">
+      <property name="severity" value="error"/>
+      <property name="ignoreConstructorParameter" value="true"/>
+      <property name="ignoreSetter" value="true"/>
+    </module>
+    <module name="ParameterAssignment">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Interdit d''affecter une valeur au paramètre"/>
+      <property name="severity" value="warning"/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.lastEnabledSeverity" value="error"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="IllegalInstantiation">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Instantiation de Boolean interdite"/>
+      <property name="severity" value="error"/>
+      <property name="classes" value="java.lang.Boolean"/>
+      <message key="instantiation.avoid" value="L''instantiation de la classe {0} est prohibée. Utiliser les constantes Boolean.FALSE ou Boolean.TRUE."/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Instantiation of Boolean are forbidden"/>
+      <metadata name="com.atlassw.tools.eclipse.checkstyle.customMessage" value="Instantiation of Boolean must be avoided (use the Boolean.valueOf() method intead)"/>
+    </module>
+    <module name="ModifiedControlVariable">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Modification de la variable de boucle interdite."/>
+      <property name="severity" value="error"/>
+    </module>
+    <module name="IllegalCatch">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Ne pas 'catcher' java.lang.Throwable &amp; java.lang.Error"/>
+      <property name="illegalClassNames" value="java.lang.Throwable, java.lang.Error"/>
+    </module>
+    <module name="LocalVariableName">
+      <property name="tokens" value="VARIABLE_DEF"/>
+      <message key="name.invalidPattern" value="NAM-VAR: Le nom ''{0}'' n''est pas conforme à l''expression ''{1}''."/>
+    </module>
+    <module name="ParameterName"/>
+    <module name="OneStatementPerLine">
+      <property name="severity" value="error"/>
+      <message key="multiple.statements.line" value="COD-INSTR: Une seule instruction par ligne de code"/>
+    </module>
+    <module name="EmptyBlock">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Blocs 'catch' vides interdit"/>
+      <property name="tokens" value="LITERAL_CATCH"/>
+      <message key="block.empty" value="COD-CATCH: Bloc ''{0}'' vide."/>
+      <message key="block.noStmt" value="COD-CATCH: Le bloc devrait contenir au moins une instruction."/>
+    </module>
+    <module name="OperatorWrap">
+      <metadata name="net.sf.eclipsecs.core.comment" value="Règle de scission des lignes de code"/>
+      <message key="line.previous" value="FMT-LBREAK: ''{0}'' devrait être sur la ligne précédente."/>
+      <message key="line.new" value="FMT-LBREAK: ''{0}'' devrait être sur une nouvelle ligne."/>
+    </module>
+    <module name="NestedForDepth">
+      <property name="severity" value="error"/>
+      <property name="max" value="3"/>
+      <message key="nested.for.depth" value="Le maximum de niveau d'imbrication pour une boucle for est de {1,number,integer}."/>
+    </module>
+    <module name="NestedIfDepth">
+      <property name="severity" value="error"/>
+      <property name="max" value="3"/>
+    </module>
+    <module name="NestedForDepth">
+      <property name="severity" value="error"/>
+      <property name="max" value="3"/>
+    </module>
+    <module name="NestedTryDepth">
+      <property name="severity" value="error"/>
+      <property name="max" value="3"/>
+    </module>
+    <module name="CyclomaticComplexity"/>
+    <module name="NestedIfDepth">
+      <property name="severity" value="warning"/>
+      <property name="max" value="2"/>
+    </module>
+    <module name="NestedForDepth">
+      <property name="severity" value="warning"/>
+      <property name="max" value="2"/>
+    </module>
+    <module name="RegexpSinglelineJava">
+      <property name="severity" value="ignore"/>
+      <property name="format" value="^(?!.*@\w*\().*\&quot;.*\&quot;.*(?&lt;!\$NON-NLS-\d\$)$"/>
+      <property name="message" value="Hard Coded String"/>
+      <property name="ignoreComments" value="true"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="warning"/>
+    </module>
+  </module>
+  <module name="RegexpHeader">
+    <property name="severity" value="ignore"/>
+    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+  </module>
+  <module name="FileTabCharacter">
+    <metadata name="net.sf.eclipsecs.core.comment" value="Utilisation des tabulations interdite"/>
+    <property name="severity" value="error"/>
+    <property name="eachLine" value="true"/>
+    <property name="fileExtensions" value="java"/>
+    <message key="containsTab" value="FMT-INDENT: Utilisation des tabulations interdite"/>
+    <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Please, no 'tab' in the code !"/>
+  </module>
+  <module name="FileLength">
+    <property name="severity" value="warning"/>
+    <property name="max" value="1500"/>
+    <property name="fileExtensions" value=".java"/>
+  </module>
+</module>
