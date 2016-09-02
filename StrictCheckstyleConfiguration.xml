@@ -164,15 +164,15 @@
     <module name="InnerAssignment">
       <property name="severity" value="error"/>
     </module>
-    <module name="GenericIllegalRegexp">
+    <module name="RegexpSinglelineJava">
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module name="GenericIllegalRegexp">
+    <module name="RegexpSinglelineJava">
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
-    <module name="GenericIllegalRegexp">
+    <module name="RegexpSinglelineJava">
       <property name="severity" value="ignore"/>
       <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
     </module>
