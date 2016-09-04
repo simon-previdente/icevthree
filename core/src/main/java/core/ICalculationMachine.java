@@ -2,6 +2,6 @@ package core;
 
 public interface ICalculationMachine {
 
-    double calculate(double a, double b);
+    double calculate(double a, double b) throws DivisonByZeroException;
 
 }
