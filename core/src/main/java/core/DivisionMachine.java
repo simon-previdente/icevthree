@@ -1,14 +1,23 @@
 package core;
 
-public class DivisionMachine implements ICalculationMachine {
+/**
+ * Machine for Divisions. Might raise a {@link DivisonByZeroException}
+ * 
+ * @author jgeisel
+ *
+ */
+public final class DivisionMachine implements ICalculationMachine {
 
     private static final DivisionMachine INSTANCE = new DivisionMachine();
     
-    public static DivisionMachine getInstance() {
-        return INSTANCE;
+    /**
+     * Singleton Constructor
+     */
+    private DivisionMachine() {
     }
     
-    private DivisionMachine() {
+    public static DivisionMachine getInstance() {
+        return INSTANCE;
     }
     
     @Override
@@ -16,7 +25,7 @@ public class DivisionMachine implements ICalculationMachine {
         if (b == 0) {
             throw new DivisonByZeroException();
         }
-        return a/b;
+        return a / b;
     }
 
 }

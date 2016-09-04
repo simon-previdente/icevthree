@@ -1,14 +1,23 @@
 package core;
 
-public class MultiplicationMachine implements ICalculationMachine {
+/**
+ * Multiplaction Machine
+ * 
+ * @author jgeisel
+ *
+ */
+public final class MultiplicationMachine implements ICalculationMachine {
 
     private static final MultiplicationMachine INSTANCE = new MultiplicationMachine();
     
-    public static MultiplicationMachine getInstance() {
-        return INSTANCE;
+    /**
+     * Singleton Constructor
+     */
+    private MultiplicationMachine() {
     }
     
-    private MultiplicationMachine() {
+    public static MultiplicationMachine getInstance() {
+        return INSTANCE;
     }
     
     @Override
@@ -16,7 +25,7 @@ public class MultiplicationMachine implements ICalculationMachine {
         if (a == 0 || b == 0) {
             return 0;
         }
-        return a*b;
+        return a * b;
     }
 
 }

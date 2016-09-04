@@ -1,14 +1,23 @@
 package core;
 
-public class SubstractionMachine implements ICalculationMachine {
+/**
+ * Substraction Machine, uses {@link AddingMachine}
+ * 
+ * @author jgeisel
+ *
+ */
+public final class SubstractionMachine implements ICalculationMachine {
 
     private static final SubstractionMachine INSTANCE = new SubstractionMachine();
     
-    public static SubstractionMachine getInstance() {
-        return INSTANCE;
+    /**
+     * Singleton Constructor
+     */
+    private SubstractionMachine() {
     }
     
-    private SubstractionMachine() {
+    public static SubstractionMachine getInstance() {
+        return INSTANCE;
     }
     
     @Override
