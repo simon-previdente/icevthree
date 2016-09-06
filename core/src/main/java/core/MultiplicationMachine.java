@@ -22,7 +22,7 @@ public final class MultiplicationMachine implements ICalculationMachine {
     
     @Override
     public double calculate(double a, double b){
-        if (a == 0 || b == 0) {
+        if (Double.compare(a, 0) == 0 || Double.compare(b, 0) == 0) {
             return 0;
         }
         return a * b;

@@ -6,6 +6,7 @@ package core;
  * @author jgeisel
  *
  */
+@FunctionalInterface
 public interface ICalculationMachine {
 
     /**

@@ -22,7 +22,7 @@ public final class DivisionMachine implements ICalculationMachine {
     
     @Override
     public double calculate(double a, double b) throws DivisonByZeroException {
-        if (b == 0) {
+        if (Double.compare(b, 0) == 0) {
             throw new DivisonByZeroException();
         }
         return a / b;
