@@ -1,7 +1,7 @@
 package core;
 
 /**
- * A Michine for adding {@link Double}
+ * A Machine for adding {@link Double}
  * 
  * @author jgeisel
  *
