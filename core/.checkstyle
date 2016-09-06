@@ -4,9 +4,9 @@
   <local-check-config name="mycs" location="/parent/StrictCheckstyleConfiguration.xml" type="project" description="">
     <additional-data name="protect-config-file" value="false"/>
   </local-check-config>
-  <local-check-config name="maven-checkstyle-plugin validate" location="file:/home/jgeisel/Desktop/exampleEclipse/git/icevthree/StrictCheckstyleConfiguration.xml" type="remote" description="maven-checkstyle-plugin configuration validate">
+  <local-check-config name="maven-checkstyle-plugin validate" location="file:/home/simon/eclipse/ice-vthree-master/git/icevthree/StrictCheckstyleConfiguration.xml" type="remote" description="maven-checkstyle-plugin configuration validate">
     <property name="checkstyle.cache.file" value="${project_loc}/target/checkstyle-cachefile"/>
-    <property name="checkstyle.header.file" value="/home/jgeisel/Desktop/exampleEclipse/ws/.metadata/.plugins/org.eclipse.core.resources/.projects/core/com.basistech.m2e.code.quality.checkstyleConfigurator/checkstyle-header-validate.txt"/>
+    <property name="checkstyle.header.file" value="/home/simon/eclipse/ice-vthree-master/ws/.metadata/.plugins/org.eclipse.core.resources/.projects/core/com.basistech.m2e.code.quality.checkstyleConfigurator/checkstyle-header-validate.txt"/>
   </local-check-config>
   <fileset name="java-sources-validate" enabled="true" check-config-name="maven-checkstyle-plugin validate" local="true">
     <file-match-pattern match-pattern="^src/main/java/.*\.java" include-pattern="true"/>
