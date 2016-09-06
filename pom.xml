@@ -9,6 +9,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sonar.projectName>${groupId}:${artifactId}</sonar.projectName>
 	</properties>
 
 	<url>https://github.com/jgirit/icevthree</url>
